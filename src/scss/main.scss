@@ -1,0 +1,11 @@
+@use 'vars' as *;
+@use 'fonts';
+@use 'mixins';
+
+body {
+  text-align: center;
+}
+
+h1 {
+  color: $primary-color;
+}
