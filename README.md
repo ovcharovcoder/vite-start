@@ -65,5 +65,5 @@
 
    + Якщо відображається привітання:
 <img src="src/images/src/hello.jpg" style="width: 500px;" alt="hello img">
-   <br> збірка працює коректно.    
+   збірка працює коректно.    
 
