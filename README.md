@@ -65,6 +65,5 @@
 
    + Якщо відображається привітання:
 <img src="src/images/src/hello.jpg" style="width: 500px;" alt="hello img">
-   + навігацією та футером,<br>
-   + а консоль браузера показує повідомлення Custom JavaScript loaded,<br> збірка працює коректно.    
+   <br> збірка працює коректно.    
 
