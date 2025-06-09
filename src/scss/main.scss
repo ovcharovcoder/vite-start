@@ -1,8 +1,9 @@
 @use 'vars' as *;
-@use 'fonts';
-@use 'mixins';
+@use 'mixins' as *;
 
-body {
-  text-align: center;
+.about {
+  margin: 1.875rem 0;
 }
-
+.about span {
+  font-weight: 700;
+}
