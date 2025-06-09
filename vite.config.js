@@ -10,7 +10,7 @@ import { copy } from 'vite-plugin-copy';
 const pagesDir = path.join(__dirname, 'src', 'pages');
 const componentsDir = path.join(__dirname, 'src', 'components');
 
-// Знаходимо всі HTML-файли в src/pages/
+// Find all HTML files in src/pages/
 let pages = {};
 try {
   const pageFiles = glob.sync(path.join(pagesDir, '*.html'), {
@@ -29,7 +29,7 @@ try {
   console.error('Error scanning src/pages:', err);
 }
 
-// Завантажуємо компоненти синхронно
+// Load components synchronously
 let headerContent = '';
 let footerContent = '';
 try {
