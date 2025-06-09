@@ -68,7 +68,7 @@
 <img src="src/images/src/hello.jpg" style="width: 600px;" alt="hello img">
    збірка працює коректно.
 
- ## License
+ ## Ліцензія
 
 <a href="LICENSE">MIT</a>
 
