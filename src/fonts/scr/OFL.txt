@@ -1,0 +1,2 @@
+## Fonts
+This project uses the Montserrat font, licensed under the SIL Open Font License (OFL) 1.1.
