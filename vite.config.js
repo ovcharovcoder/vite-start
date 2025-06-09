@@ -1,11 +1,11 @@
 import { defineConfig } from 'vite';
-import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
 import postcssPresetEnv from 'postcss-preset-env';
 import path from 'path';
 import fs from 'fs';
 import { glob } from 'glob';
+import { copy } from 'vite-plugin-copy';
 
 const pagesDir = path.join(__dirname, 'src', 'pages');
 const componentsDir = path.join(__dirname, 'src', 'components');
@@ -59,22 +59,19 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'src/js/main.js'),
-        ...Object.keys(pages).reduce((acc, name) => {
-          acc[name] = pages[name];
-          return acc;
-        }, {}),
+        ...pages,
       },
       output: {
-        entryFileNames: ({ name }) => `js/${name}.min.js`,
+        entryFileNames: 'js/[name].min.js',
         chunkFileNames: 'js/[name]-[hash].min.js',
         assetFileNames: ({ name }) => {
           if (/\.css$/i.test(name)) {
             return 'css/style.min.css';
           }
-          if (/\.(woff|woff2|ttf|otf)$/i.test(name)) {
+          if (/\.(woff|woff2)$/i.test(name)) {
             return 'fonts/[name][extname]';
           }
-          if (/\.(png|jpg|jpeg|webp|avif)$/i.test(name)) {
+          if (/\.(webp|avif|jpg|png|jpeg)$/i.test(name)) {
             return 'images/[name][extname]';
           }
           if (/\.svg$/i.test(name)) {
@@ -87,7 +84,13 @@ export default defineConfig({
     },
     minify: 'esbuild',
     cssMinify: 'esbuild',
-    assetsInclude: ['**/*.woff', '**/*.woff2', '**/*.svg'],
+    assetsInclude: [
+      '**/*.woff',
+      '**/*.woff2',
+      '**/*.svg',
+      '**/*.webp',
+      '**/*.avif',
+    ],
   },
   css: {
     preprocessorOptions: {
@@ -104,15 +107,14 @@ export default defineConfig({
     },
   },
   plugins: [
-    ViteImageOptimizer({
-      test: /\.(png|jpe?g)$/i,
-      include: ['src/images/src/**/*.{png,jpg,jpeg}'],
-      exclude: ['src/images/icons/**'],
-      webp: { quality: 80 },
-      avif: { quality: 50 },
-      logStats: true,
-      cache: false,
-      outputDir: path.join('dist', 'images'),
+    copy({
+      targets: [
+        { src: 'src/images/*.{webp,avif,jpg,png,jpeg}', dest: 'dist/images' },
+        { src: 'src/images/icons/*.svg', dest: 'dist/images/icons' },
+        { src: 'src/fonts/**/*.{woff,woff2}', dest: 'dist/fonts' },
+      ],
+      hook: 'writeBundle',
+      verbose: true,
     }),
     {
       name: 'fix-paths',
@@ -130,7 +132,6 @@ export default defineConfig({
       transformIndexHtml(html) {
         console.log('Fixing HTML paths...');
         let fixedHtml = html
-          // Крок 1: Заміна /src/ шляхів
           .replace(/\/src\/images\/(.*?)\.(jpg|png|webp|avif)/g, 'images/$1.$2')
           .replace(
             /\/src\/images\/src\/(.*?)\.(jpg|png|webp|avif)/g,
@@ -139,10 +140,8 @@ export default defineConfig({
           .replace(/\/src\/images\/icons\/(.*?)\.svg/g, 'images/icons/$1.svg')
           .replace(/\/src\/scss\/.*\.scss/g, 'css/style.min.css')
           .replace(/\/src\/js\/.*\.js/g, 'js/main.min.js')
-          // Крок 2: Видалення залишкових src/
           .replace(/src\/images\/(.*?)\.(jpg|png|webp|avif)/g, 'images/$1.$2')
           .replace(/src\/images\/icons\/(.*?)\.svg/g, 'images/icons/$1.svg')
-          // Крок 3: Видалення початкових слешів
           .replace(/\/+images\/(.*?)\.(jpg|png|webp|avif)/g, 'images/$1.$2')
           .replace(/\/+images\/icons\/(.*?)\.svg/g, 'images/icons/$1.svg')
           .replace(/\/+css\/style\.min\.css/g, 'css/style.min.css')
