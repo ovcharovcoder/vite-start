@@ -65,6 +65,6 @@
 4. Відкрийте http://localhost:3000 у браузері.
 
    + Якщо відображається привітання:
-<img src="src/images/src/hello.jpg" style="width: 500px;" alt="hello img">
+<img src="src/images/src/hello.jpg" style="width: 600px;" alt="hello img">
    збірка працює коректно.    
 
