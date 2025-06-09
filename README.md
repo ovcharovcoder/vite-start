@@ -1,4 +1,4 @@
-# VITE-START
+# VITE-VANILLA-START
 
 ## ПРО ЗБІРКУ
 
