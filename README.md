@@ -69,7 +69,8 @@
    збірка працює коректно.    
 
 
-☕ Сподобалась збірка? Пригостіть автора кавою через [PayPal](https://www.paypal.com/donate/?business=datoshcode@gmail.com)
+## ☕ Сподобалась збірка? 
+Пригостіть автора кавою через [PayPal](https://www.paypal.com/donate/?business=datoshcode@gmail.com)
 
 
 
