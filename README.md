@@ -66,7 +66,11 @@
 
    + Якщо відображається привітання:
 <img src="src/images/src/hello.jpg" style="width: 600px;" alt="hello img">
-   збірка працює коректно.    
+   збірка працює коректно.
+
+ ## License
+
+<a href="LICENSE">MIT</a>
 
 
 ## ☕ Сподобалась збірка? 
