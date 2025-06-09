@@ -62,6 +62,6 @@
 2. Виконайте команду для встановлення залежностей: npm i
 3. Запустіть розробку: npm run dev
 4. Відкрийте http://localhost:3000 у браузері. Якщо відображається привітання:
-<img src="src/images/src/hello.jpg" style="width: 200px;" alt="hello img">
+<img src="src/images/src/hello.jpg" style="width: 400px;" alt="hello img">
 навігацією та футером, а консоль браузера показує повідомлення Custom JavaScript loaded, збірка працює коректно.    
 
