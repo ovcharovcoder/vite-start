@@ -11,7 +11,7 @@ console.log('Watching for changes...');
 console.log('Images:', imageDir);
 console.log('Fonts:', fontDir);
 
-// Спостерігаємо за зображеннями
+// Watching the images
 chokidar
   .watch(imageDir, { ignoreInitial: false, awaitWriteFinish: true })
   .on('all', (event, filePath) => {
@@ -33,7 +33,7 @@ chokidar
     }
   });
 
-// Спостерігаємо за шрифтами
+// Watching the fonts
 chokidar
   .watch(fontDir, { ignoreInitial: false, awaitWriteFinish: true })
   .on('all', (event, filePath) => {
