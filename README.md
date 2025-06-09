@@ -68,13 +68,13 @@
 <img src="src/images/src/hello.jpg" style="width: 600px;" alt="hello img">
    збірка працює коректно.
 
- ## Ліцензія
-
-<a href="LICENSE">MIT</a>
-
 
 ## ☕ Сподобалась збірка? 
 Пригостіть автора кавою через [PayPal](https://www.paypal.com/donate/?business=datoshcode@gmail.com)
+
+ ## Ліцензія
+
+<a href="LICENSE">MIT</a>
 
 
 
