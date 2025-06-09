@@ -1,7 +1,8 @@
 {
-  "name": "vite-vanilla-start",
+  "name": "my-vite-project",
   "version": "1.0.0",
   "type": "module",
+  "author": "Andriy Ovcharov <ovcharovcoder@gmail.com>",
   "scripts": {
     "dev": "concurrently \"vite\" \"npm run watch-assets\"",
     "build": "node convert-fonts.js && node convert-images.js && vite build",
