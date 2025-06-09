@@ -68,3 +68,8 @@
 <img src="src/images/src/hello.jpg" style="width: 600px;" alt="hello img">
    збірка працює коректно.    
 
+
+☕ Сподобалась збірка? Пригостіть автора кавою через [PayPal](https://www.paypal.com/donate/?business=datoshcode@gmail.com)
+
+
+
