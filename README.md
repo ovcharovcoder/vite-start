@@ -75,7 +75,7 @@
 
  ## Ліцензія
 
-<a href="LICENSE">MIT</a>
+<a href="LICENSE">MIT LICENSE</a>
 
 
 
