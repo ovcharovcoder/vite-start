@@ -43,7 +43,7 @@ src/
 |   |-- footer.html
 |
 |--css/
-|	 |-- main.css
+||-- main.css
 |
 |-- fonts/
 |   |-- src/
