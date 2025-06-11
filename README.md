@@ -61,22 +61,22 @@ src/
 |   |-- about.html
 |
 |-- scss/
-|   |--_fonts.scss
-|   |--_global.scss
-|   |--_main.scss
-|   |--_media.scss
-|   |--_mixins.scss
-|   |--_vars.scss
-|   |--_optimize.scss
-|   |--style.scss
-|   
-|-- .gitignore
-|-- convert-fonts.js 
-|-- convert-images.js 
-|-- package.json
-|-- vite-config.js
-|-- watch-assets.js
-|-- readme.txt
+    |--_fonts.scss
+    |--_global.scss
+    |--_main.scss
+    |--_media.scss
+    |--_mixins.scss
+    |--_vars.scss
+    |--_optimize.scss
+    |--style.scss
+   
+.gitignore
+convert-fonts.js 
+convert-images.js 
+package.json
+vite-config.js
+watch-assets.js
+readme.txt
 ```
 
 
