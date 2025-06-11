@@ -35,6 +35,51 @@
 3. Збірка проєкту: npm run build
 
 
+## СТРУКТУРА ПРОЄКТУ:
+```
+src/
+|-- components/
+|   |-- header.html
+|   |-- footer.html
+|
+|		|--css/
+|		|-- main.css
+|
+|-- fonts/
+|   |-- src/
+|   
+|-- images/
+|   |-- icons/
+|   |-- src/
+|
+|-- js/ 
+|   |-- main.js 
+|   |-- scripts.js 
+|   
+|-- pages/
+|   |-- index.html
+|   |-- about.html
+|
+|-- scss/
+|   |--_fonts.scss
+|   |--_global.scss
+|   |--_main.scss
+|   |--_media.scss
+|   |--_mixins.scss
+|   |--_vars.scss
+|   |--_optimize.scss
+|   |--style.scss
+|   
+|-- .gitignore
+|-- convert-fonts.js 
+|-- convert-images.js 
+|-- package.json
+|-- vite-config.js
+|-- watch-assets.js
+|-- readme.txt
+```
+
+
 ## РОБОТА З ФАЙЛАМИ ПРОЄКТУ
 
  **Робота із зображеннями**
