@@ -1,5 +1,5 @@
-@use 'vars' as *;
-@use 'mixins' as *;
+@use 'vars';
+@use 'mixins';
 
 html,
 body {
@@ -22,8 +22,8 @@ footer {
 }
 
 body {
-  @include fontBase-400;
-  color: $primary-color;
+  @include mixins.fontBase-400;
+  color: vars.$primary-color;
 }
 
 .container {
@@ -33,17 +33,17 @@ body {
 }
 
 header {
-  background-color: $bgcolor;
+  background-color:  vars.$bgcolor;
   padding: 1.875rem 0;
 }
 
 footer {
-  background-color: $bgcolor;
+  background-color:  vars.$bgcolor;
   padding: 3.125rem 0;
 }
 
 h1 {
-  color: $primary-color;
+  color:  vars.$primary-color;
   font-size: 3.125rem;
   text-align: center;
 }
