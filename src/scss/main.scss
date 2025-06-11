@@ -1,5 +1,12 @@
-@use 'vars' as *;
-@use 'mixins' as *;
+@use 'vars';
+@use 'mixins';
+
+/*
+body {
+  background: vars.$primary-color;
+  @include mixins.font-400;
+}
+*/
 
 .about {
   margin: 1.875rem 0;
