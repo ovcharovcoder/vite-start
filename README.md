@@ -42,8 +42,8 @@ src/
 |   |-- header.html
 |   |-- footer.html
 |
-|		|--css/
-|		|-- main.css
+|--css/
+|	 |-- main.css
 |
 |-- fonts/
 |   |-- src/
